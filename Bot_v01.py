@@ -3,10 +3,13 @@
 import openai
 import streamlit as st
 from streamlit_chat import message
+import os
 
 # Open API key
 
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+
+# openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # Generating responses from the api
 
